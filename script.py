@@ -75,10 +75,31 @@ def main(village):
 	print (get_id(village))
 	print (get_polygon(get_id(village))) 
 
+def move_files(): 
+	for file in os.listdir('.'):	
+		if file.endswith('.geojson'):
+			os.rename("./" + file, "./geojsons/" + file)
+
+def remove_nan(directory): 
+	counter = 0 
+	for file in os.listdir(directory):
+		filepath = directory + '/' + file
+		json_data=open(filepath).read()
+		if 'None' in json_data: 
+		 	counter += 1 
+		 	os.remove(filepath)
+	return (counter, 'files removed.')
 
 if __name__ == '__main__':
-	for village in get_villages2("http://vlist.in/sub-district/02144.html"): 
+	counter = 0 
+	url = 'http://vlist.in/sub-district/02041.html'
+	for village in get_villages2(url): 
 		main(village)
+		counter+= 1
+	print (counter, 'villages tried.')
+
+	move_files()
+	remove_nan('geojsons')
 
 # Test cases. 
 # 1. Araria 

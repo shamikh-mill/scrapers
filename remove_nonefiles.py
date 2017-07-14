@@ -1,16 +1,5 @@
-# import os 
+# This code is already implemented in main script.py. 
 
-# def remove_nan(directory): 
-# 	for file in os.listdir(directory):
-# 		filename = os.fsdecode(file)
-# 		with open(file, 'r') as f:
-# 			first_line = f.readline()
-
-# 			if first_line == "None": 
-# 				os.remove(file)
-
-
-# remove_nan('villages')
 import json 
 import os 
 
@@ -24,6 +13,15 @@ def remove_nan(directory):
 		 	os.remove(filepath)
 	return (counter, 'files removed.')
 
+
+def move_files(): 
+	for file in os.listdir('.'):	
+		if file.endswith('.geojson'):
+			os.rename("./" + file, "./geojsons/" + file)
+			
+
 if __name__ == '__main__':
+	move_files()
 	remove_nan('geojsons')
+
 
