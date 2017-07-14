@@ -13,15 +13,19 @@ import os
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-html = urlopen("http://www.mapsofindia.com/villages/assam/") 
-soup = BeautifulSoup(html.read(), 'lxml');
 
-data = soup.findAll('div',attrs={'class':'vill_liking'})
-for div in data:
-	links = div.findAll('a')
+def get_villages(url): 
+	html = urlopen(url)
+	soup = BeautifulSoup(html.read(), 'lxml');
 
-villages = [link.text for link in links]
-print ((villages), len(villages))
+	# specific for webpage format: 
+	data = soup.findAll('div',attrs={'class':'vill_liking'})
+	for div in data:
+		links = div.findAll('a')
+
+	villages = [link.text for link in links]
+	print (villages, len(villages))
+	return villages 
 
 
 def get_id(search): 
@@ -59,7 +63,7 @@ def main(village):
 
 
 if __name__ == '__main__':
-	for village in villages: 
+	for village in get_villages("http://www.mapsofindia.com/villages/assam/"): 
 		main(village)
 
 # Test cases. 
