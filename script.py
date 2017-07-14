@@ -3,6 +3,8 @@
 2. Get the OSM_id from json response 
 JSON: 
 3. Search OSM id into Polygon search to retrieve JSON 
+4. Store geojson in directory with extension .geojson
+5. Remove empty files 
 '''
 import urllib.request, json
 import geojson
