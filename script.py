@@ -27,9 +27,23 @@ def get_villages(url):
 	print (villages, len(villages))
 	return villages 
 
+def get_villages2(url): 
+	html = urlopen(url)
+	soup = BeautifulSoup(html.read(), 'lxml');
+
+	# specific for webpage format: 
+	data = soup.find_all('a', href=True)
+
+	villages = [link.text for link in data]
+	print (villages, len(villages))
+	return villages 
+
 
 def get_id(search): 
+	if len(search.split(" ")) > 1: 
+		search = "+".join(search.split(" ")) 
 	url = 'http://nominatim.openstreetmap.org/search/' + search + '?format=json'
+
 	try: 
 		with urllib.request.urlopen(url) as url:
 			data = json.loads(url.read().decode()) 
@@ -63,7 +77,7 @@ def main(village):
 
 
 if __name__ == '__main__':
-	for village in get_villages("http://www.mapsofindia.com/villages/assam/"): 
+	for village in get_villages2("http://vlist.in/sub-district/02144.html"): 
 		main(village)
 
 # Test cases. 

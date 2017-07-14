@@ -15,13 +15,14 @@ import json
 import os 
 
 def remove_nan(directory): 
+	counter = 0 
 	for file in os.listdir(directory):
 		filepath = directory + '/' + file
 		json_data=open(filepath).read()
 		if 'None' in json_data: 
-		 	print (True)
+		 	counter += 1 
 		 	os.remove(filepath)
-
+	return (counter, 'files removed.')
 
 if __name__ == '__main__':
 	remove_nan('geojsons')
