@@ -92,7 +92,7 @@ def remove_nan(directory):
 
 if __name__ == '__main__':
 	counter = 0 
-	url = 'http://vlist.in/sub-district/02041.html'
+	url = 'http://vlist.in/district/585.html'
 	for village in get_villages2(url): 
 		main(village)
 		counter+= 1
