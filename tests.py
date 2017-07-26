@@ -19,6 +19,7 @@ def get_villages(url):
 	return villages 
 
 
+# for villageinfo.in
 def get_villages2(url): 
 	html = urlopen(url)
 	soup = BeautifulSoup(html.read(), 'lxml');

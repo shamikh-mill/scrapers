@@ -84,15 +84,19 @@ def remove_nan(directory):
 	counter = 0 
 	for file in os.listdir(directory):
 		filepath = directory + '/' + file
-		json_data=open(filepath).read()
-		if 'None' in json_data: 
-		 	counter += 1 
-		 	os.remove(filepath)
+		try:
+			json_data=open(filepath).read()
+			if 'None' in json_data: 
+				counter += 1 
+				os.remove(filepath)
+		except: 
+			print('File cannot be read for deletion function.')
 	return (counter, 'files removed.')
 
 if __name__ == '__main__':
 	counter = 0 
-	url = 'http://vlist.in/sub-district/02041.html'
+	url = 'http://vlist.in/state/10.html'
+
 	for village in get_villages2(url): 
 		main(village)
 		counter+= 1
