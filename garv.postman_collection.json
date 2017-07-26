@@ -1,0 +1,253 @@
+{
+	"variables": [],
+	"info": {
+		"name": "shamikh",
+		"_postman_id": "015d43f1-0505-6c71-39cc-448b55f63186",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "garv.gov",
+			"request": {
+				"url": "https://garv.gov.in/garv2/dashboard/data/dashboard_garv",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": "garv.gov.in",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Origin",
+						"value": "https://garv.gov.in",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=ie2ldegcthurhkaj3drkacrn91; garv2session=W2NXbVM1DGoCewh%2BVmoMNgFgAWwGdA5wUGECIFB8VTlXOwpqX18AMl1gBScHbg0iWmIDNQw4ADEBcgNtAzBbZQRiUmdeNQBgU2VbMQhvCWdbN1dmUzIMNQJlCDpWYgw3ATYBMwZnDjNQNwJjUDlVYFc1CjVfMQBpXWcFJwduDSJaYgM3DDoAMQFyAz0DI1sJBDFSZ15lAHdTNVsmCCQJcFs5VyRTOwxhAjQIN1ZyDDABYQF4BmQOM1AzAn1QPlVlV2MKKl8xAGNdNQUnB24NIlpiAzcMOgAxAXIDIQMgWzMEIlJcXmAAYlM1WzsIIwlwWzlXJFM7DGECMQg4VmoMJQEdATkGLA5qUGgCP1BuVX9XYQoqXzAAe10sBVIHPA0%2FWjwDaQx9AHgBcAMaAwdbdgRhUjNeLwA1U2tbdQgACTtbbFdhUzUMawIgCHVWZgwzAXkBdgYXDnNQdAI%2FUGpVB1cxCmZfSwAyXXAFKgdgDWJabwMoDDkAPQFwA3wDGFseBARSTl5NAClTcFs5CD4JOVtnV3dTRgw1AmMIZlY%2FDC4BcAEVBj4OcVBrAj5QalV%2FV2EKPV8uAGtdKgU2B2UNZlppAygMOwA6AWUDdAMAWzcENlJiXnMAbFN%2FW2AIZAllWyxXZFM3DHICOwh%2BVmoMNgFjAWwGdA5vUGUCIFB7VQ9XNQpnX3QAMl1yBWwHIQ0oWnoDPQxjADEBYQNhA2NbZgRmUjReNgA1U2dbZQhsCS8%3D",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page",
+							"value": "dashboard_garv",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "maptype",
+							"value": "states",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ci_csrf_token",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "garvstate",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "garvdiscom",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "search_text",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "uuid",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kyroargs",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "drilldownkey",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kyrorefreshid",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kyroclickid",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mixinput",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": "https://garv.gov.in/garv2/dashboard/garv"
+			},
+			"response": []
+		},
+		{
+			"name": "garv.gov copy",
+			"request": {
+				"url": "https://garv.gov.in/garv2/dashboard/data/dashboard_garv",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Host",
+						"value": "garv.gov.in",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Origin",
+						"value": "https://garv.gov.in",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=ie2ldegcthurhkaj3drkacrn91; garv2session=W2NXbVM1DGoCewh%2BVmoMNgFgAWwGdA5wUGECIFB8VTlXOwpqX18AMl1gBScHbg0iWmIDNQw4ADEBcgNtAzBbZQRiUmdeNQBgU2VbMQhvCWdbN1dmUzIMNQJlCDpWYgw3ATYBMwZnDjNQNwJjUDlVYFc1CjVfMQBpXWcFJwduDSJaYgM3DDoAMQFyAz0DI1sJBDFSZ15lAHdTNVsmCCQJcFs5VyRTOwxhAjQIN1ZyDDABYQF4BmQOM1AzAn1QPlVlV2MKKl8xAGNdNQUnB24NIlpiAzcMOgAxAXIDIQMgWzMEIlJcXmAAYlM1WzsIIwlwWzlXJFM7DGECMQg4VmoMJQEdATkGLA5qUGgCP1BuVX9XYQoqXzAAe10sBVIHPA0%2FWjwDaQx9AHgBcAMaAwdbdgRhUjNeLwA1U2tbdQgACTtbbFdhUzUMawIgCHVWZgwzAXkBdgYXDnNQdAI%2FUGpVB1cxCmZfSwAyXXAFKgdgDWJabwMoDDkAPQFwA3wDGFseBARSTl5NAClTcFs5CD4JOVtnV3dTRgw1AmMIZlY%2FDC4BcAEVBj4OcVBrAj5QalV%2FV2EKPV8uAGtdKgU2B2UNZlppAygMOwA6AWUDdAMAWzcENlJiXnMAbFN%2FW2AIZAllWyxXZFM3DHICOwh%2BVmoMNgFjAWwGdA5vUGUCIFB7VQ9XNQpnX3QAMl1yBWwHIQ0oWnoDPQxjADEBYQNhA2NbZgRmUjReNgA1U2dbZQhsCS8%3D",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "page",
+							"value": "dashboard_garv",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "maptype",
+							"value": "states",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ci_csrf_token",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "garvstate",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "garvdiscom",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "search_text",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "uuid",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kyroargs",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "drilldownkey",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kyrorefreshid",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "kyroclickid",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mixinput",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": "https://garv.gov.in/garv2/dashboard/garv"
+			},
+			"response": []
+		}
+	]
+}

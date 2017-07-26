@@ -1,0 +1,1214 @@
+{
+    "dependentfilters": {
+        "garvdiscom": "
+<option value=''>All Discom<\/option>
+    <option   value='2'>APDA<\/option>
+        <option   value='3'>APDCL<\/option>
+            <option   value='15'>APEPDCL<\/option>
+                <option   value='48'>APSPDCL<\/option>
+                    <option   value='1'>AVVNL<\/option>
+                        <option   value='4'>BESCOM<\/option>
+                            <option   value='6'>CESC. Mysore<\/option>
+                                <option   value='5'>CESU<\/option>
+                                    <option   value='9'>CSPDCL<\/option>
+                                        <option   value='11'>DGVCL<\/option>
+                                            <option   value='12'>DHBVN<\/option>
+                                                <option   value='10'>DNHPDCL<\/option>
+                                                    <option   value='13'>DVVNL<\/option>
+                                                        <option   value='16'>ED, A&amp;N <\/option>
+                                                            <option   value='17'>EPD, Sikkim<\/option>
+                                                                <option   value='18'>GED<\/option>
+                                                                    <option   value='19'>GESCOM<\/option>
+                                                                        <option   value='21'>HESCOM<\/option>
+                                                                            <option   value='20'>HPSEBL<\/option>
+                                                                                <option   value='25'>JBVNL<\/option>
+                                                                                    <option   value='26'>JDVVNL<\/option>
+                                                                                        <option   value='23'>JKPDD<\/option>
+                                                                                            <option   value='24'>JVVNL<\/option>
+                                                                                                <option   value='27'>KSEB<\/option>
+                                                                                                    <option   value='32'>MeECL<\/option>
+                                                                                                        <option   value='31'>MESCOM<\/option>
+                                                                                                            <option   value='28'>MGVCL<\/option>
+                                                                                                                <option   value='33'>MPMKVVCL<\/option>
+                                                                                                                    <option   value='34'>MPPoKVVCL<\/option>
+                                                                                                                        <option   value='35'>MPPsKVVCL<\/option>
+                                                                                                                            <option   value='30'>MSEDCL<\/option>
+                                                                                                                                <option   value='29'>MVVNL<\/option>
+                                                                                                                                    <option   value='37'>NBPDCL<\/option>
+                                                                                                                                        <option   value='36'>NESCO<\/option>
+                                                                                                                                            <option   value='41'>PD, Manipur<\/option>
+                                                                                                                                                <option   value='14'>PD, Nagaland.<\/option>
+                                                                                                                                                    <option   value='42'>PED<\/option>
+                                                                                                                                                        <option   value='40'>PED, Mizoram<\/option>
+                                                                                                                                                            <option   value='38'>PGVCL<\/option>
+                                                                                                                                                                <option   value='43'>PSPCL<\/option>
+                                                                                                                                                                    <option   value='44'>PuVVNL<\/option>
+                                                                                                                                                                        <option   value='39'>PVVNL<\/option>
+                                                                                                                                                                            <option   value='46'>SBPDCL<\/option>
+                                                                                                                                                                                <option   value='47'>SOUTHCO<\/option>
+                                                                                                                                                                                    <option   value='49'>TANGEDCO<\/option>
+                                                                                                                                                                                        <option   value='50'>TSECL<\/option>
+                                                                                                                                                                                            <option   value='51'>TSNPDCL<\/option>
+                                                                                                                                                                                                <option   value='52'>TSSPDCL<\/option>
+                                                                                                                                                                                                    <option   value='53'>UGVCL<\/option>
+                                                                                                                                                                                                        <option   value='54'>UHBVNL<\/option>
+                                                                                                                                                                                                            <option   value='55'>UPCL<\/option>
+                                                                                                                                                                                                                <option   value='57'>WBSEDCL<\/option>
+                                                                                                                                                                                                                    <option   value='56'>WESCO<\/option>"
+    },
+    "drillcaption": "
+                                                                                                                                                                                                                        <ul class='drillbreadcrumb'>
+                                                                                                                                                                                                                            <li>ALL INDIA<\/li><\/ul> ",
+    "panels": {
+        "gallery": {
+            "ID": "p35",
+            "page": "dashboard_garv",
+            "panel": "gallery",
+            "rowno": "3",
+            "cols": "md5",
+            "class": "white",
+            "bodyclass": null,
+            "icon": "fa fa-photo",
+            "default": null,
+            "sortno": "5",
+            "caption": "Gallery ",
+            "element": null,
+            "type": null,
+            "component": null,
+            "active": "1",
+            "callback": null,
+            "panelbuttons": null,
+            "roles": "N",
+            "controls": {
+                "gallery": {
+                    "ID": "c48",
+                    "page": "dashboard_garv",
+                    "panel": "gallery",
+                    "name": "gallery",
+                    "class": "gallery",
+                    "cols": "",
+                    "color": null,
+                    "default": null,
+                    "sortno": "6",
+                    "caption": "Gallery",
+                    "element": null,
+                    "type": null,
+                    "component": "gallery",
+                    "active": "1",
+                    "callback": null,
+                    "onclick": "",
+                    "onclickdailog": null,
+                    "panelmodel": "gallery",
+                    "secure": "N",
+                    "data": {
+                        "pics": [
+                            "uploads\/gallery\/\/00Pragati.jpg",
+                            "uploads\/gallery\/\/10Nongbsap_estkhasi_meghalaya.jpg",
+                            "uploads\/gallery\/\/11Nongbsap_estkhasi_meghalaya2.jpg",
+                            "uploads\/gallery\/\/13JatingaValleyAssam.jpg",
+                            "uploads\/gallery\/\/1Naudipadar_gajapati_Odisha.jpg",
+                            "uploads\/gallery\/\/2ashakiran1.jpg",
+                            "uploads\/gallery\/\/3Thingkangphai_chandel_manipur.jpg",
+                            "uploads\/gallery\/\/4ashakiran2.jpg",
+                            "uploads\/gallery\/\/5PungchiDimaHasao_Assam.jpg",
+                            "uploads\/gallery\/\/6ashakiran3.jpg",
+                            "uploads\/gallery\/\/7tripura.jpg",
+                            "uploads\/gallery\/\/8ashakiran4.jpg",
+                            "uploads\/gallery\/\/9Chilli_palamu_jharkhand.jpg"
+                        ]
+                    }
+                }
+            }
+        },
+        "hhmain": {
+            "ID": "p33",
+            "page": "dashboard_garv",
+            "panel": "hhmain",
+            "rowno": "2",
+            "cols": "lg12",
+            "class": "white",
+            "bodyclass": null,
+            "icon": "fa fa-bolt",
+            "default": null,
+            "sortno": "2",
+            "caption": "Households Electrification : 
+                                                                                                                                                                                                                                <span class='mycount paneltotal' >178997372<\/span>",
+            "element": null,
+            "type": null,
+            "component": null,
+            "active": "1",
+            "callback": null,
+            "panelbuttons": "\/\/garv.gov.in\/garv2\/dashboard",
+            "roles": "N",
+            "controls": {
+                "hh": {
+                    "ID": "c44",
+                    "page": "dashboard_garv",
+                    "panel": "hhmain",
+                    "name": "hh",
+                    "class": "hhstatus",
+                    "cols": "sm12,md7,lg6",
+                    "color": null,
+                    "default": null,
+                    "sortno": "3",
+                    "caption": "HH Status",
+                    "element": null,
+                    "type": "DT",
+                    "component": "uestatus",
+                    "active": "1",
+                    "callback": null,
+                    "onclick": "drilltable",
+                    "onclickdailog": null,
+                    "panelmodel": "hhstatus",
+                    "secure": "N",
+                    "sqlstr": "select sum(IFNULL(hc,0)) as hc,sum(IFNULL(wip,0)) as wip,sum(IFNULL(m1,0)) as m1,sum(IFNULL(m2,0)) as m2,sum(IFNULL(m3,0)) as m3,sum(IFNULL(m4,0)) as m4,sum(IFNULL(m5,0)) as m5,sum(IFNULL(m6,0)) as m6,sum(IFNULL(p.hchh100,0)) as hh100,sum(IFNULL(p.hcdtc100,0)) as dtc100,sum(IFNULL(p.hh,0)) as hh,sum(IFNULL(p.ehh,0)) as ehh,sum(IFNULL(p.tpehh,0)) as tpehh,sum(IFNULL(p.ehh,0)) as tehh,sum(IFNULL(p.hh,0)-IFNULL(p.ehh,0)) as uehh,sum((select count(DISTINCT vi.vcid)  from visits vi where vi.vcid=p.vcid and vi.approved='Y')) as eimpact from village_cache p  where ifnull(p.hh,0) >0    ",
+                    "data": {
+                        "total": 178997372,
+                        "target": "Habitations \n178997372",
+                        "help": {
+                            "uehh": {
+                                "caption": "To be Electrified"
+                            },
+                            "tehh": {
+                                "caption": "Electrified"
+                            }
+                        },
+                        "series": {
+                            "data": [
+                                {
+                                    "name": "uehh",
+                                    "value": 43672423
+                                },
+                                {
+                                    "name": "tehh",
+                                    "value": 135324949
+                                }
+                            ],
+                            "color": [
+                                "#696663",
+                                "#E47815"
+                            ],
+                            "name": "statuschart",
+                            "caption": "Household Status"
+                        },
+                        "items": {
+                            "tpehh": {
+                                "caption": "Electrification Progress",
+                                "color": "#E47815",
+                                "icon": "ebulb.png",
+                                "value": 1205298
+                            },
+                            "uehh": {
+                                "caption": "To be Electrified",
+                                "color": "#696663",
+                                "icon": "hhue.png",
+                                "value": 43672423
+                            }
+                        }
+                    },
+                    "paneltotal": ": 
+                                                                                                                                                                                                                                    <span class='mycount paneltotal' >178997372<\/span>"
+                },
+                "hhprogress": {
+                    "ID": "c46",
+                    "page": "dashboard_garv",
+                    "panel": "hhmain",
+                    "name": "hhprogress",
+                    "class": "hhprogresschart",
+                    "cols": "sm12,md5,lg6",
+                    "color": null,
+                    "default": null,
+                    "sortno": "4",
+                    "caption": "HH Progress",
+                    "element": null,
+                    "type": "DT",
+                    "component": "monthlyprogress",
+                    "active": "1",
+                    "callback": null,
+                    "onclick": "drilltable",
+                    "onclickdailog": null,
+                    "panelmodel": "hhprogress",
+                    "secure": "N",
+                    "tabcontrol": "weeklyhhp",
+                    "sqlstr": "select DATE_FORMAT(DATE_ADD(hp.hpdate, INTERVAL(8-DAYOFWEEK(hp.hpdate)) DAY),'Week#%v-%d-%b-%y') as mday,sum(if(hh.ehh >=hh.hh,1,0)) whc100,sum(IFNULL(hp.hprogress,0)) whh from habitationprogress hp,habitations hh,villages p  where hp.hbid=hh.hbid and ifnull(hh.hh,0) >0 and  hh.vcid=p.vcid   and week(hp.hpdate,1) > week(now(),1)-12 GROUP BY DATE_FORMAT(hp.hpdate,'%Y-%v') order BY hp.hpdate desc limit 6 ",
+                    "data": {
+                        "series": {
+                            "name": "weeklyhhp",
+                            "caption": "No. of Household Electrified",
+                            "color": "#E47815",
+                            "vcaption": "",
+                            "data": [
+                                {
+                                    "name": "Week#29-23-Jul-17",
+                                    "value": [
+                                        1,
+                                        0,
+                                        45275
+                                    ]
+                                },
+                                {
+                                    "name": "Week#28-16-Jul-17",
+                                    "value": [
+                                        2,
+                                        10,
+                                        53582
+                                    ]
+                                },
+                                {
+                                    "name": "Week#27-09-Jul-17",
+                                    "value": [
+                                        3,
+                                        0,
+                                        30914
+                                    ]
+                                },
+                                {
+                                    "name": "Week#26-02-Jul-17",
+                                    "value": [
+                                        4,
+                                        10,
+                                        17931
+                                    ]
+                                },
+                                {
+                                    "name": "Week#25-25-Jun-17",
+                                    "value": [
+                                        5,
+                                        0,
+                                        24680
+                                    ]
+                                },
+                                {
+                                    "name": "Week#24-18-Jun-17",
+                                    "value": [
+                                        6,
+                                        10,
+                                        20177
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "maintable": {
+            "ID": "p36",
+            "page": "dashboard_garv",
+            "panel": "maintable",
+            "rowno": "4",
+            "cols": "lg12",
+            "class": "white",
+            "bodyclass": null,
+            "icon": "fa fa-th-large",
+            "default": null,
+            "sortno": "6",
+            "caption": "Electrification Status Sheet : 
+                                                                                                                                                                                                                                        <i>ALL INDIA
+                                                                                                                                                                                                                                            <\/>",
+            "element": null,
+            "type": null,
+            "component": null,
+            "active": "1",
+            "callback": null,
+            "panelbuttons": null,
+            "roles": "N",
+            "controls": {
+                "maintable": {
+                    "ID": "c49",
+                    "page": "dashboard_garv",
+                    "panel": "maintable",
+                    "name": "maintable",
+                    "class": "row",
+                    "cols": "",
+                    "color": null,
+                    "default": null,
+                    "sortno": "7",
+                    "caption": "Electrification Status Sheet",
+                    "element": null,
+                    "type": null,
+                    "component": "maintable",
+                    "active": "1",
+                    "callback": null,
+                    "onclick": "",
+                    "onclickdailog": null,
+                    "panelmodel": "maintable",
+                    "secure": "N",
+                    "groupid": "garvstate",
+                    "sqlstr": "select gtb.scid as ID,gtb.state as gfield,'' as ue,'' as eue,'' as unue,'' as nfue,'' as bue,count(DISTINCT p.vcid) as vc,sum(IFNULL(hc,0)) as hc,sum(IFNULL(p.hh,0)) as hh,sum(IFNULL(p.ehh,0)) as tehh,sum(IFNULL(p.hh,0)-IFNULL(p.ehh,0)) as uehh,round(sum(IFNULL(p.ehh,0))*100\/sum(IFNULL(p.hh,0)),2) as pehh from village_cache p ,states gtb  where ifnull(p.hh,0) >0  and p.scid = gtb.scid  group by p.scid,gfield order by gfield",
+                    "data": [
+                        {
+                            "ID": "28",
+                            "gfield": "Andhra Pradesh",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "17385",
+                            "hc": "50224",
+                            "hh": "11204206",
+                            "tehh": "11204187",
+                            "uehh": "19",
+                            "pehh": "100.00"
+                        },
+                        {
+                            "ID": "12",
+                            "gfield": "Arunachal Pradesh",
+                            "ue": "1578",
+                            "eue": "367",
+                            "unue": "0",
+                            "nfue": "0",
+                            "bue": "1211",
+                            "vc": "5067",
+                            "hc": "6649",
+                            "hh": "232151",
+                            "tehh": "150951",
+                            "uehh": "81200",
+                            "pehh": "65.02"
+                        },
+                        {
+                            "ID": "18",
+                            "gfield": "Assam",
+                            "ue": "2892",
+                            "eue": "2328",
+                            "unue": "124",
+                            "nfue": "0",
+                            "bue": "440",
+                            "vc": "25457",
+                            "hc": "81106",
+                            "hh": "5186152",
+                            "tehh": "2755279",
+                            "uehh": "2430873",
+                            "pehh": "53.13"
+                        },
+                        {
+                            "ID": "10",
+                            "gfield": "Bihar",
+                            "ue": "2747",
+                            "eue": "2428",
+                            "unue": "77",
+                            "nfue": "0",
+                            "bue": "242",
+                            "vc": "38272",
+                            "hc": "63572",
+                            "hh": "12292220",
+                            "tehh": "5641219",
+                            "uehh": "6651001",
+                            "pehh": "45.89"
+                        },
+                        {
+                            "ID": "22",
+                            "gfield": "Chhattisgarh",
+                            "ue": "1080",
+                            "eue": "812",
+                            "unue": "0",
+                            "nfue": "0",
+                            "bue": "268",
+                            "vc": "19817",
+                            "hc": "74484",
+                            "hh": "4518804",
+                            "tehh": "3870337",
+                            "uehh": "648467",
+                            "pehh": "85.65"
+                        },
+                        {
+                            "ID": "30",
+                            "gfield": "Goa",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "319",
+                            "hc": "319",
+                            "hh": "128207",
+                            "tehh": "128207",
+                            "uehh": "0",
+                            "pehh": "100.00"
+                        },
+                        {
+                            "ID": "24",
+                            "gfield": "Gujarat",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "16672",
+                            "hc": "19455",
+                            "hh": "6645095",
+                            "tehh": "6616320",
+                            "uehh": "28775",
+                            "pehh": "99.57"
+                        },
+                        {
+                            "ID": "06",
+                            "gfield": "Haryana",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "6633",
+                            "hc": "7226",
+                            "hh": "3420819",
+                            "tehh": "2725576",
+                            "uehh": "695243",
+                            "pehh": "79.68"
+                        },
+                        {
+                            "ID": "02",
+                            "gfield": "Himachal Pradesh",
+                            "ue": "35",
+                            "eue": "28",
+                            "unue": "7",
+                            "nfue": "0",
+                            "bue": "0",
+                            "vc": "17235",
+                            "hc": "48215",
+                            "hh": "1467312",
+                            "tehh": "1447923",
+                            "uehh": "19389",
+                            "pehh": "98.68"
+                        },
+                        {
+                            "ID": "01",
+                            "gfield": "Jammu & Kashmir",
+                            "ue": "134",
+                            "eue": "32",
+                            "unue": "0",
+                            "nfue": "0",
+                            "bue": "102",
+                            "vc": "6382",
+                            "hc": "17841",
+                            "hh": "1287783",
+                            "tehh": "1017545",
+                            "uehh": "270238",
+                            "pehh": "79.02"
+                        },
+                        {
+                            "ID": "20",
+                            "gfield": "Jharkhand",
+                            "ue": "2525",
+                            "eue": "2020",
+                            "unue": "56",
+                            "nfue": "0",
+                            "bue": "449",
+                            "vc": "29515",
+                            "hc": "107007",
+                            "hh": "5380449",
+                            "tehh": "2301825",
+                            "uehh": "3078624",
+                            "pehh": "42.78"
+                        },
+                        {
+                            "ID": "29",
+                            "gfield": "Karnataka",
+                            "ue": "39",
+                            "eue": "29",
+                            "unue": "0",
+                            "nfue": "0",
+                            "bue": "10",
+                            "vc": "28894",
+                            "hc": "71145",
+                            "hh": "9621705",
+                            "tehh": "8404695",
+                            "uehh": "1217010",
+                            "pehh": "87.35"
+                        },
+                        {
+                            "ID": "32",
+                            "gfield": "Kerala",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "1490",
+                            "hc": "7485",
+                            "hh": "7103358",
+                            "tehh": "7102997",
+                            "uehh": "361",
+                            "pehh": "99.99"
+                        },
+                        {
+                            "ID": "23",
+                            "gfield": "Madhya Pradesh",
+                            "ue": "472",
+                            "eue": "379",
+                            "unue": "47",
+                            "nfue": "0",
+                            "bue": "46",
+                            "vc": "54014",
+                            "hc": "121160",
+                            "hh": "11381635",
+                            "tehh": "6827687",
+                            "uehh": "4553948",
+                            "pehh": "59.99"
+                        },
+                        {
+                            "ID": "27",
+                            "gfield": "Maharashtra",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "41984",
+                            "hc": "99671",
+                            "hh": "14049465",
+                            "tehh": "12946489",
+                            "uehh": "1102976",
+                            "pehh": "92.15"
+                        },
+                        {
+                            "ID": "14",
+                            "gfield": "Manipur",
+                            "ue": "276",
+                            "eue": "211",
+                            "unue": "0",
+                            "nfue": "0",
+                            "bue": "65",
+                            "vc": "2509",
+                            "hc": "4442",
+                            "hh": "387628",
+                            "tehh": "280528",
+                            "uehh": "107100",
+                            "pehh": "72.37"
+                        },
+                        {
+                            "ID": "17",
+                            "gfield": "Meghalaya",
+                            "ue": "912",
+                            "eue": "755",
+                            "unue": "10",
+                            "nfue": "0",
+                            "bue": "147",
+                            "vc": "6551",
+                            "hc": "6551",
+                            "hh": "463022",
+                            "tehh": "323755",
+                            "uehh": "139267",
+                            "pehh": "69.92"
+                        },
+                        {
+                            "ID": "15",
+                            "gfield": "Mizoram",
+                            "ue": "58",
+                            "eue": "42",
+                            "unue": "4",
+                            "nfue": "0",
+                            "bue": "12",
+                            "vc": "714",
+                            "hc": "715",
+                            "hh": "110336",
+                            "tehh": "99238",
+                            "uehh": "11098",
+                            "pehh": "89.94"
+                        },
+                        {
+                            "ID": "13",
+                            "gfield": "Nagaland",
+                            "ue": "82",
+                            "eue": "78",
+                            "unue": "4",
+                            "nfue": "0",
+                            "bue": "0",
+                            "vc": "1433",
+                            "hc": "2695",
+                            "hh": "159661",
+                            "tehh": "71738",
+                            "uehh": "87923",
+                            "pehh": "44.93"
+                        },
+                        {
+                            "ID": "21",
+                            "gfield": "Odisha",
+                            "ue": "3474",
+                            "eue": "2555",
+                            "unue": "515",
+                            "nfue": "0",
+                            "bue": "404",
+                            "vc": "48171",
+                            "hc": "131262",
+                            "hh": "8405194",
+                            "tehh": "4575301",
+                            "uehh": "3829893",
+                            "pehh": "54.43"
+                        },
+                        {
+                            "ID": "34",
+                            "gfield": "PUDUCHERRY",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "92",
+                            "hc": "92",
+                            "hh": "101788",
+                            "tehh": "101413",
+                            "uehh": "375",
+                            "pehh": "99.63"
+                        },
+                        {
+                            "ID": "03",
+                            "gfield": "Punjab",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "12177",
+                            "hc": "13874",
+                            "hh": "3688646",
+                            "tehh": "3688646",
+                            "uehh": "0",
+                            "pehh": "100.00"
+                        },
+                        {
+                            "ID": "08",
+                            "gfield": "Rajasthan",
+                            "ue": "495",
+                            "eue": "426",
+                            "unue": "68",
+                            "nfue": "0",
+                            "bue": "1",
+                            "vc": "42838",
+                            "hc": "131612",
+                            "hh": "8999796",
+                            "tehh": "6867294",
+                            "uehh": "2132502",
+                            "pehh": "76.30"
+                        },
+                        {
+                            "ID": "11",
+                            "gfield": "Sikkim",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "149",
+                            "hc": "954",
+                            "hh": "37281",
+                            "tehh": "31653",
+                            "uehh": "5628",
+                            "pehh": "84.90"
+                        },
+                        {
+                            "ID": "33",
+                            "gfield": "Tamil Nadu",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "14137",
+                            "hc": "95322",
+                            "hh": "10277714",
+                            "tehh": "10277567",
+                            "uehh": "147",
+                            "pehh": "100.00"
+                        },
+                        {
+                            "ID": "36",
+                            "gfield": "Telangana",
+                            "ue": "",
+                            "eue": "",
+                            "unue": "",
+                            "nfue": "",
+                            "bue": "",
+                            "vc": "10466",
+                            "hc": "24792",
+                            "hh": "5978016",
+                            "tehh": "4944391",
+                            "uehh": "1033625",
+                            "pehh": "82.71"
+                        },
+                        {
+                            "ID": "16",
+                            "gfield": "Tripura",
+                            "ue": "26",
+                            "eue": "26",
+                            "unue": "0",
+                            "nfue": "0",
+                            "bue": "0",
+                            "vc": "872",
+                            "hc": "9032",
+                            "hh": "796198",
+                            "tehh": "575995",
+                            "uehh": "220203",
+                            "pehh": "72.34"
+                        },
+                        {
+                            "ID": "09",
+                            "gfield": "Uttar Pradesh",
+                            "ue": "1529",
+                            "eue": "1470",
+                            "unue": "53",
+                            "nfue": "0",
+                            "bue": "6",
+                            "vc": "102695",
+                            "hc": "269894",
+                            "hh": "30123769",
+                            "tehh": "15110378",
+                            "uehh": "15013391",
+                            "pehh": "50.16"
+                        },
+                        {
+                            "ID": "05",
+                            "gfield": "Uttarakhand",
+                            "ue": "76",
+                            "eue": "24",
+                            "unue": "1",
+                            "nfue": "0",
+                            "bue": "51",
+                            "vc": "15759",
+                            "hc": "42427",
+                            "hh": "1728620",
+                            "tehh": "1543054",
+                            "uehh": "185566",
+                            "pehh": "89.27"
+                        },
+                        {
+                            "ID": "19",
+                            "gfield": "West Bengal",
+                            "ue": "22",
+                            "eue": "18",
+                            "unue": "0",
+                            "nfue": "0",
+                            "bue": "4",
+                            "vc": "36965",
+                            "hc": "100772",
+                            "hh": "13820342",
+                            "tehh": "13692761",
+                            "uehh": "127581",
+                            "pehh": "99.08"
+                        }
+                    ],
+                    "activecation": "ALL INDIA",
+                    "columns": {
+                        "gfield": {
+                            "caption": "State",
+                            "callback": "maintableclick"
+                        },
+                        "ue": {
+                            "caption": "UE Villages",
+                            "class": "dt-right sum"
+                        },
+                        "eue": {
+                            "caption": "UE Electrified",
+                            "class": "dt-right sum"
+                        },
+                        "unue": {
+                            "caption": "UE Unhabited",
+                            "class": "dt-right sum"
+                        },
+                        "bue": {
+                            "caption": "UE To Be Electrified",
+                            "class": "dt-right sum"
+                        },
+                        "hh": {
+                            "caption": "Total Households",
+                            "class": "dt-right sum"
+                        },
+                        "vc": {
+                            "caption": "Total Villages",
+                            "class": "dt-right sum"
+                        },
+                        "hc": {
+                            "caption": "Habitations",
+                            "class": "dt-right sum"
+                        },
+                        "tehh": {
+                            "caption": "Electrified HH",
+                            "class": "dt-right sum"
+                        },
+                        "uehh": {
+                            "caption": "Balance HH",
+                            "class": "dt-right sum"
+                        },
+                        "pehh": {
+                            "caption": "%Electrified HH",
+                            "class": "dt-right"
+                        }
+                    },
+                    "paneltotal": ":
+                                                                                                                                                                                                                                            <i>ALL INDIA
+                                                                                                                                                                                                                                                <\/>"
+                }
+            }
+        },
+        "milestone": {
+            "ID": "p34",
+            "page": "dashboard_garv",
+            "panel": "milestone",
+            "rowno": "3",
+            "cols": "md7",
+            "class": "white",
+            "bodyclass": null,
+            "icon": "fa fa-bolt",
+            "default": null,
+            "sortno": "3",
+            "caption": "Electrification Progress ",
+            "element": null,
+            "type": null,
+            "component": null,
+            "active": "1",
+            "callback": null,
+            "panelbuttons": null,
+            "roles": "N",
+            "controls": {
+                "uepart": {
+                    "ID": "c47",
+                    "page": "dashboard_garv",
+                    "panel": "milestone",
+                    "name": "uepart",
+                    "class": "row",
+                    "cols": "",
+                    "color": null,
+                    "default": null,
+                    "sortno": "5",
+                    "caption": "Electrification Progress",
+                    "element": null,
+                    "type": "DT",
+                    "component": "mileprogress",
+                    "active": "1",
+                    "callback": null,
+                    "onclick": "drilltable",
+                    "onclickdailog": null,
+                    "panelmodel": "mileprogress",
+                    "secure": "N",
+                    "tabcontrol": "uepart",
+                    "sqlstr": "select sum(visits) as tv,count(*) as count, SUM(if(v.electrified+eegva+engva > 1, 1, 0)) AS e,SUM(if(v.uninhabited =1, 1, 0)) as e4,SUM(if(v.uninhabited =2, 1, 0)) as notfeasible,sum(if(v.electrified+eegva+engva< 2 and v.uninhabited=0, 1, 0)) as uehh,sum(if(v.uninhabited=0 and v.electrified+m1+m2+m3+m4+m5+m6+m7+m8+m9+m10+m11+m12+eegva+engva=0,1,0)) as s1,sum(if(v.uninhabited=0 and (m1+m2+m3+m4+m5+m6+m7+m8)>0 and (v.electrified+eegva+engva+m9+m10+m11+m12)=0,1,0)) as s3,sum(if(v.uninhabited=0 and v.electrified+eegva+engva
+                                                                                                                                                                                                                                                <2 and (v.electrified+eegva+engva+m9+m10+m11+m12)>0,1,0)) as s4,sum(IF (IFNULL(v.electrified,0)+IFNULL(m1,0)+IFNULL(m2,0)+IFNULL(m3,0)+IFNULL(m4,0)+IFNULL(m5,0)+IFNULL(m6,0)+IFNULL(m7,0)+IFNULL(m8,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m1,sum(IF (IFNULL(v.electrified,0)+IFNULL(m2,0)+IFNULL(m3,0)+IFNULL(m4,0)+IFNULL(m5,0)+IFNULL(m6,0)+IFNULL(m7,0)+IFNULL(m8,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m2,sum(IF (IFNULL(v.electrified,0)+IFNULL(m3,0)+IFNULL(m4,0)+IFNULL(m5,0)+IFNULL(m6,0)+IFNULL(m7,0)+IFNULL(m8,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m3,sum(IF (IFNULL(v.electrified,0)+IFNULL(m4,0)+IFNULL(m5,0)+IFNULL(m6,0)+IFNULL(m7,0)+IFNULL(m8,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m4,sum(IF (IFNULL(v.electrified,0)+IFNULL(m5,0)+IFNULL(m6,0)+IFNULL(m7,0)+IFNULL(m8,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m5,sum(IF (IFNULL(v.electrified,0)+IFNULL(m6,0)+IFNULL(m7,0)+IFNULL(m8,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m6,sum(IF (IFNULL(v.electrified,0)+IFNULL(m7,0)+IFNULL(m8,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m7,sum(IF (IFNULL(v.electrified,0)+IFNULL(m8,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m8,sum(IF (IFNULL(v.electrified,0)+IFNULL(m9,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m9,sum(IF (IFNULL(v.electrified,0)+IFNULL(m10,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m10,sum(IF (IFNULL(v.electrified,0)+IFNULL(m11,0)+IFNULL(m12,0) >0,1,0)) as m11,sum(IF (IFNULL(v.electrified,0)+IFNULL(m12,0) >0,1,0)) as m12 from recmobilepms.uevillages v,villages p where v.vcid=p.vcid and IFNULL(v.active,'')='Y'  ",
+                    "data": {
+                        "target": 221424,
+                        "help": {
+                            "m1": {
+                                "caption": "Awarded"
+                            },
+                            "m2": {
+                                "caption": "Receipt of poles in the villages and enroute of villages for 11KV LINE & LT Line"
+                            },
+                            "m3": {
+                                "caption": "Erection of poles for 11KV line & DTR substation and earthing"
+                            },
+                            "m4": {
+                                "caption": "Erection of poles for LT line"
+                            },
+                            "m5": {
+                                "caption": "Receipt of line material including conductor and cable"
+                            },
+                            "m6": {
+                                "caption": "Conductor Stringing of 11KV line"
+                            },
+                            "m7": {
+                                "caption": "Conductor\/cable Stringing of LT line"
+                            },
+                            "m8": {
+                                "caption": "Receipt of distribution transformer substation at site"
+                            },
+                            "m9": {
+                                "caption": "Erection of distribution transformer substation equipment (DTR,LTDB,LA,AB switch,cablesmeter,fuse,earthing)"
+                            },
+                            "m10": {
+                                "caption": "completion of electrification works in village including BPL service connection"
+                            },
+                            "m11": {
+                                "caption": "Energisation of village including BPL service connection "
+                            },
+                            "m12": {
+                                "caption": "Handing over villages"
+                            }
+                        },
+                        "series": {
+                            "data": [
+                                {
+                                    "name": "m1",
+                                    "value": 17391
+                                },
+                                {
+                                    "name": "m2",
+                                    "value": 14434
+                                },
+                                {
+                                    "name": "m3",
+                                    "value": 14345
+                                },
+                                {
+                                    "name": "m4",
+                                    "value": 14298
+                                },
+                                {
+                                    "name": "m5",
+                                    "value": 14158
+                                },
+                                {
+                                    "name": "m6",
+                                    "value": 14137
+                                },
+                                {
+                                    "name": "m7",
+                                    "value": 14109
+                                },
+                                {
+                                    "name": "m8",
+                                    "value": 14090
+                                },
+                                {
+                                    "name": "m9",
+                                    "value": 14058
+                                },
+                                {
+                                    "name": "m10",
+                                    "value": 14031
+                                },
+                                {
+                                    "name": "m11",
+                                    "value": 14030
+                                },
+                                {
+                                    "name": "m12",
+                                    "value": 14028
+                                }
+                            ],
+                            "name": "uemilestone",
+                            "caption": "UE \n Milestones",
+                            "color": [
+                                "#E9131F",
+                                "#F35D9E",
+                                "#935BAA",
+                                "#145A8D",
+                                "#71A5D3",
+                                "#23AEDA",
+                                "#24ABE4",
+                                "#FE931F",
+                                "#F2E535",
+                                "#8DC641",
+                                "#08A6A1",
+                                "#3CB649"
+                            ]
+                        },
+                        "items": {
+                            "hh100": {
+                                "class": "col-xs-4",
+                                "caption": "100% Households",
+                                "color": "#E47815",
+                                "icon": "hh100.png",
+                                "value": 1135
+                            },
+                            "dtc100": {
+                                "class": "col-xs-4",
+                                "caption": "100% DT Capacity",
+                                "color": "#9A7D0A",
+                                "icon": "dt100.png",
+                                "value": 6634
+                            },
+                            "s3": {
+                                "class": "col-xs-4",
+                                "caption": "Work In Progress",
+                                "icon": "wip.png",
+                                "color": "#FFA500",
+                                "value": 3191
+                            },
+                            "eimpact": {
+                                "class": "col-xs-4",
+                                "caption": "Impact Analysis",
+                                "icon": "impactsurvey.png",
+                                "color": "#FFB500",
+                                "value": 5471
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "uemain": {
+            "ID": "p32",
+            "page": "dashboard_garv",
+            "panel": "uemain",
+            "rowno": "1",
+            "cols": "lg12",
+            "class": "white",
+            "bodyclass": null,
+            "icon": "fa fa-bolt",
+            "default": null,
+            "sortno": "1",
+            "caption": "Villages Electrification : 
+                                                                                                                                                                                                                                                    <span class='mycount paneltotal' >18452<\/span>",
+            "element": null,
+            "type": null,
+            "component": null,
+            "active": "1",
+            "callback": null,
+            "panelbuttons": "\/\/garv.gov.in\/dashboard\/ue",
+            "roles": "N",
+            "controls": {
+                "ue": {
+                    "ID": "c41",
+                    "page": "dashboard_garv",
+                    "panel": "uemain",
+                    "name": "ue",
+                    "class": "uestatus",
+                    "cols": "sm12,md7,lg6",
+                    "color": null,
+                    "default": null,
+                    "sortno": "1",
+                    "caption": "UE Status",
+                    "element": null,
+                    "type": "DT",
+                    "component": "uestatus",
+                    "active": "1",
+                    "callback": null,
+                    "onclick": "drilltable",
+                    "onclickdailog": null,
+                    "panelmodel": "uestatus",
+                    "secure": "N",
+                    "data": {
+                        "total": 18452,
+                        "help": {
+                            "E": {
+                                "caption": "Electrified"
+                            },
+                            "UEHH": {
+                                "caption": "To be Electrified"
+                            },
+                            "E4": {
+                                "caption": "Uninhabited"
+                            }
+                        },
+                        "series": {
+                            "color": [
+                                "#E47815",
+                                "#696663",
+                                "#A286D9"
+                            ],
+                            "data": [
+                                {
+                                    "name": "E",
+                                    "value": 14028
+                                },
+                                {
+                                    "name": "UEHH",
+                                    "value": 3458
+                                },
+                                {
+                                    "name": "E4",
+                                    "value": 966
+                                }
+                            ],
+                            "name": "statuschart",
+                            "caption": "Household Status"
+                        },
+                        "items": {
+                            "e": {
+                                "caption": "Electrified",
+                                "color": "#E47815",
+                                "icon": "ebulb.png",
+                                "value": 14028
+                            },
+                            "uehh": {
+                                "caption": "To be Electrified",
+                                "color": "#696663",
+                                "icon": "uebulb.png",
+                                "value": 3458
+                            },
+                            "e4": {
+                                "caption": "Uninhabited",
+                                "icon": "uninhabited.png",
+                                "color": "#A286D9",
+                                "value": 966
+                            }
+                        }
+                    },
+                    "paneltotal": ": 
+                                                                                                                                                                                                                                                        <span class='mycount paneltotal' >18452<\/span>"
+                },
+                "ueprogress": {
+                    "ID": "c43",
+                    "page": "dashboard_garv",
+                    "panel": "uemain",
+                    "name": "ueprogress",
+                    "class": "ueprogress",
+                    "cols": "sm12,md5,lg6",
+                    "color": null,
+                    "default": null,
+                    "sortno": "2",
+                    "caption": "UE Progress",
+                    "element": null,
+                    "type": "DT",
+                    "component": "monthlyprogress",
+                    "active": "1",
+                    "callback": null,
+                    "onclick": "drilltable",
+                    "onclickdailog": null,
+                    "panelmodel": "ueprogress",
+                    "secure": "N",
+                    "tabcontrol": "weeklyuep",
+                    "sqlstr": "select DATE_FORMAT(DATE_ADD(v.edate, INTERVAL(8-DAYOFWEEK(v.edate)) DAY),'Week#%v-%d-%b-%y') as mday,count(*) as vc from recmobilepms.uevillages v,villages p  where v.vcid=p.vcid and v.electrified+eegva+engva >1 and ISNULL(v.edate)=false and IFNULL(v.active,'')='Y'   and week(v.edate,1) > week(now(),1)-12 GROUP BY DATE_FORMAT(v.edate,'%Y-%v') order by v.edate desc limit 6 ",
+                    "data": {
+                        "series": {
+                            "name": "weeklyuep",
+                            "caption": "No. of villages Electrified",
+                            "color": "#E47815",
+                            "vcaption": "",
+                            "data": [
+                                {
+                                    "name": "Week#29-23-Jul-17",
+                                    "value": [
+                                        1,
+                                        0,
+                                        56
+                                    ]
+                                },
+                                {
+                                    "name": "Week#28-16-Jul-17",
+                                    "value": [
+                                        2,
+                                        10,
+                                        55
+                                    ]
+                                },
+                                {
+                                    "name": "Week#27-09-Jul-17",
+                                    "value": [
+                                        3,
+                                        0,
+                                        45
+                                    ]
+                                },
+                                {
+                                    "name": "Week#26-02-Jul-17",
+                                    "value": [
+                                        4,
+                                        10,
+                                        140
+                                    ]
+                                },
+                                {
+                                    "name": "Week#25-25-Jun-17",
+                                    "value": [
+                                        5,
+                                        0,
+                                        50
+                                    ]
+                                },
+                                {
+                                    "name": "Week#24-18-Jun-17",
+                                    "value": [
+                                        6,
+                                        10,
+                                        52
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
