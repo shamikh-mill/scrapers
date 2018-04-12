@@ -1,6 +1,10 @@
 """
 Utils function libary for Data Extraction Pipeline. Should be in the same directory as feature_extraction.ipynb.
 
+Import this into a jupyter notebook or other python file in the same directory with: 
+from utils import *
+confirm_utils() # confirmation message
+
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,10 +17,18 @@ import re
 
 
 def confirm_utils():
+    """
+    Confirmation message to ensure utils.py imported correctly. 
+    """
     return ('Utilities library successfully loaded.') 
 
 def create_csv(feature_labels, VIIRS_IMAGE_PATH = "./indian_village_dataset/imagery_res30_48bands/", 
     MASK_IMAGE_PATH = "./indian_village_dataset/masks_res30/", csv_name = 'output.csv', debug = False): 
+    """
+    Output a CSV file with rows of villages and columns of image features.
+    Parameters
+    feature_labels (str): 
+    """
 
     files = [file for file in os.listdir(MASK_IMAGE_PATH) if file.endswith('.tif')] 
 
