@@ -34,9 +34,9 @@ def create_csv(feature_labels, VIIRS_IMAGE_PATH = "./indian_village_dataset/imag
 
     if (debug): 
         files = np.random.choice(files, 100) 
-        print ("Debug = True: Testing on 100 villages.") 
+        print ("Debug Mode: Testing on 100 villages.") 
     else: 
-        print ("Debug = False: Running for all {} villages.".format(len(files)))
+        print ("Full Mode: Running for all {} villages.".format(len(files)))
 
     features, village_ids = np.array([]), np.array([])
     counter_invalid, id_invalid, error_image = 0, 0, 0
