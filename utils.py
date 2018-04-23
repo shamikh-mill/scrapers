@@ -17,19 +17,21 @@ import re
 
 
 def confirm_utils():
-    """
-    Confirmation message to ensure utils.py imported correctly. 
-    """
+    """Confirmation message to ensure utils.py imported correctly."""
     return ('Utilities library successfully loaded.') 
 
 def create_csv(feature_labels, VIIRS_IMAGE_PATH = "./indian_village_dataset/imagery_res30_48bands/", 
     MASK_IMAGE_PATH = "./indian_village_dataset/masks_res30/", csv_name = 'output.csv', debug = False): 
     """
     Output a CSV file with rows of villages and columns of image features.
-    Parameters
-    feature_labels (str): 
-    """
 
+    Parameters
+    feature_labels (List of strings): List of desired feature labels
+    VIIRS_IMAGE_PATH (str): path of image directory
+    MASK_IMAGE_PATH (str): path of masks directory 
+    csv_name (str): desired output CSV filename 
+    debug (boolean): If True, does a test run with 100 villages instead of on all data. 
+    """
     files = [file for file in os.listdir(MASK_IMAGE_PATH) if file.endswith('.tif')] 
 
     if (debug): 
@@ -93,13 +95,21 @@ def create_csv(feature_labels, VIIRS_IMAGE_PATH = "./indian_village_dataset/imag
     data.to_csv(csv_name)
     return ("Finished writing CSV file {}.".format(csv_name))
 
-def preprocess_garv(garv_data_path): 
-    ### dataframe setup for GARV dataset
+def preprocess_garv(garv_data_path, dropNaNs = False): 
+    """
+    DataFrame creation, preprocessing and setup for GARV data. 
+
+    Parameters
+    garv_data_path (str): Path of CSV file of the GARV dataset
+    dropNaNs (boolean): If True, drops rows with NaNs
+
+    Returns dataframe with a percentage electrified column, cleaned of nan values, 
+    """
     df = pd.read_csv(garv_data_path)
     df = df.replace(-9, np.nan)
-    # Drop ".0" from census ID 
-    df['Census 2011 ID'] = df['Census 2011 ID'].astype(str).str[:-2]
+    df['Census 2011 ID'] = df['Census 2011 ID'].astype(str).str[:-2] # Drop ".0" from census ID 
     df['Percentage Electrified'] = (df['Number of Electrified Households']/df['Number of Households'])*100
-    df = df.dropna(axis=0, how='any') # drop rows that have NaN values 
+    if dropNans: 
+        df = df.dropna(axis=0, how='any') # drop rows that have NaN values 
     df[~df.index.duplicated(keep=False)]
     return df 
