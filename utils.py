@@ -6,6 +6,7 @@ from utils import *
 confirm_utils() # confirmation message
 
 """
+# Imports 
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -18,7 +19,8 @@ import re
 
 def confirm_utils():
     """Confirmation message to ensure utils.py imported correctly."""
-    return ('Utilities library successfully loaded.') 
+    print ('Utilities library successfully loaded.') 
+    return 
 
 def create_csv(feature_labels, VIIRS_IMAGE_PATH = "./indian_village_dataset/imagery_res30_48bands/", 
     MASK_IMAGE_PATH = "./indian_village_dataset/masks_res30/", csv_name = 'output.csv', debug = False): 
@@ -113,3 +115,27 @@ def preprocess_garv(garv_data_path, dropNaNs = False):
         df = df.dropna(axis=0, how='any') # drop rows that have NaN values 
     df[~df.index.duplicated(keep=False)]
     return df 
+
+
+"""
+Functions to add 
+1. Reading in and cleaning dataframe 
+2. Interpolation 
+3. Train and test split 
+4. Upsampling 
+5. Scaling 
+6. Applying basic classifiers 
+7. Cross validation 
+
+Evaluation 
+1. Precision & Recall
+2. ROC 
+3. F-Score 
+4. Confusion matrices
+5. Feature importances
+6. classification_reports 
+
+
+Functions to deploy on new data 
+1. Intersection of features 
+"""
