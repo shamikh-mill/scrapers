@@ -382,6 +382,7 @@ def plot_roc_curve(label=None):
     # plt.savefig('name.png') # Use to save image 
 
 """
+# Add docstrings for evals 
 Evaluation 
 1. Precision & Recall
 2. ROC 
