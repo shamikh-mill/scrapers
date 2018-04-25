@@ -1,5 +1,10 @@
 """
-Utils function libary for Data Extraction Pipeline. Should be in the same directory as feature_extraction.ipynb.
+Welcome to the Utilities function libary for the Energy Data Analytics Lab Bass Connections Project. 
+This library of functions will be useful for extracting and manipulating Indian village data.
+This file, named utils.py, should be in the same directory as feature_extraction.ipynb, as this notebook imports and utlizes some of these functions. 
+Thorough descriptions and docstrings for each function are provided in the definitions. 
+For additional clarification, feel free to reach out to a member of the 2017-2018 team. 
+
 
 Import this into a jupyter notebook or other python file in the same directory with: 
 from utils import *
@@ -15,6 +20,36 @@ import csv
 import math
 from skimage import io
 import re
+
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.utils import resample
+from sklearn.decomposition import PCA
+from sklearn.model_selection import cross_val_predict
+from sklearn.metrics import confusion_matrix
+
+import seaborn as sns
+from matplotlib import style
+from seaborn import heatmap
+
+from sklearn import linear_model
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import Perceptron
+from sklearn.linear_model import SGDClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC, LinearSVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import cross_val_score
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc
+from sklearn.metrics import f1_score
+from sklearn.metrics import precision_score, recall_score
+from sklearn.metrics import precision_recall_curve
+
+
 
 
 def confirm_utils():
@@ -99,13 +134,14 @@ def create_csv(feature_labels, VIIRS_IMAGE_PATH = "./indian_village_dataset/imag
 
 def preprocess_garv(garv_data_path, dropNaNs = False): 
     """
-    DataFrame creation, preprocessing and setup for GARV data. 
+    DataFrame creation, preprocessing and setup for GARV data. Things like column names, etc. can be modified as needed easily. 
 
     Parameters
     garv_data_path (str): Path of CSV file of the GARV dataset
     dropNaNs (boolean): If True, drops rows with NaNs
 
-    Returns dataframe with a percentage electrified column, cleaned of nan values, 
+    Returns dataframe with a new percentage electrified column, cleaned of nan values, and dropped duplicates. 
+    Replaces -9 (missing data) values with np.NaN.
     """
     df = pd.read_csv(garv_data_path)
     df = df.replace(-9, np.nan)
@@ -114,19 +150,217 @@ def preprocess_garv(garv_data_path, dropNaNs = False):
     if dropNans: 
         df = df.dropna(axis=0, how='any') # drop rows that have NaN values 
     df[~df.index.duplicated(keep=False)]
+    print ('Preprocessing of GARV dataframe complete.')
     return df 
+
+def preprocess_features(csv_name: str): 
+    """
+    Preprocesses the feature dataframe to have numerical values when applicable, drop full NaN rows, etc. 
+
+    Parameters 
+    csv_name: Name of feature dataframe to read (created from the create_csv function above, ideally in the same directory.)
+
+    Returns the modified dataframe.
+    """
+    df = pd.read_csv(csv_name, skip_blank_lines=True).dropna(axis=0, how='all')
+    df = df.rename(index=str, columns={"Unnamed: 0": "Census 2011 ID"})
+    df['Census 2011 ID'] = df['Census 2011 ID'].astype(str)
+    df = df[~df.index.duplicated(keep=False)]
+    df = df.apply(pd.to_numeric, errors="ignore")
+    print ('Preprocessing of feature dataframe complete.')
+    return df 
+
+def clean_read_numerical(path: str): 
+    """
+    Read in a CSV file without the "Unnamed" columns, and with all values numerical. 
+
+    Argument: path- the file location of the CSV file to read as a string 
+    Returns: DataFrame with 'Unnamed' columns removed. 
+
+    """
+    df = pd.read_csv(path)
+    for col_name in df.columns:
+        if str(col_name[:7]) == 'Unnamed':
+            del df[col_name]
+
+    for col in df:
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+
+    return df
+
+def interpolate(df: pd.DataFrame): 
+    """
+    Returns the DataFrame with missing values filled in using column (axis = 1) interpolation. 
+    For example, if we're missing data for the month of March, the surrounding months of January and February will be averaged and imputed for March. 
+    Edge cases are considered negligible and are ignored. 
+    """
+    df = df.interpolate(axis=1)
+    print ('Interpolation successful.')
+    return df 
+
+def make_train_test_split(df: pd.DataFrame, ratio: float): 
+    """
+    Make train and test split for the DataFrame with the desired ratio.
+
+    Arguments: 
+    df: DataFrame containing all data 
+    ratio: Proportion of the data (0 < x < 1) desired for the testing set. 
+
+    Returns: A tuple (a, b) of two DataFrames, the train and test DataFrames, respectively: (Test, Train)
+    """
+    df, test_data_df = train_test_split(df, test_size=ratio)
+    print ('Train Shape', df.shape, 'Test Shape', test_data_df.shape)
+
+def upsample(df: pd.DataFrame):
+    """
+    Upsample the minority class in the training data for better classification
+
+    Arguments: 
+    df: DataFrame containing all training DataFrame 
+
+    Returns: A DataFrame with upsampled minority class (unelectrified villages) and downsampled majority class (electrified)
+    """
+    df0 = df[df.electric_category == 0]
+    df1 = df[df.electric_category == 1]
+
+    print ('Sizes before sampling: ', df1.shape, df0.shape)
+
+    df0 = resample(df0, 
+                    replace=True,     # sample with replacement
+                    n_samples=12000,  # to match majority class, Was 10000 
+                    random_state=123) # reproducible results. 
+
+    df1 = resample(df1, n_samples = 12000)
+    df = pd.concat([df1, df0])
+
+    print ('Train Shape', df.shape, 'Test Shape', test_data_df.shape)
+    print ('New Train Classes')
+    print (df.electric_category.value_counts())
+    print ('New Train Classes')
+    print (test_data_df.electric_category.value_counts())
+    return df 
+
+def check_train_test_valid(train_df: pd.DataFrame, test_df: pd.DataFrame): 
+    """
+    Simple sanity check that ensures that the Training and Testing datasets have no rows in common
+
+    Arguments: 
+    train_df: Training DataFrame
+    test_df: Testing DataFrame
+
+    Returns: Boolean, if True, then training and testing data are different as they should be. 
+    """
+    a = [x for x in train_df['Census 2011 ID'].values if x in test_df['Census 2011 ID'].values]
+    if len(a) == 0: 
+        print ('Train and Test dataframes are valid and contain no same rows.')
+        return True 
+    else: 
+        print ('Warning: Train and Test dataframes have some rows in common-')
+        print (a)
+        return False 
+
+def scale(df: pd.DataFrame, test_data_df: pd.DataFrame, minmaxscaling = True): 
+    """
+    Scale the training and testing data in the proper way (with attention to transform and fit transform)
+
+    Arguments: 
+    df: The training dataframe
+    test_data_df: The testing dataframe
+    minmax: (Boolean) If true, MinMax(0,1) scaling will be used over the Standard Scaler, which is used otherwise. 
+    MinMaxScaler is used by default. 
+
+    Returns: (X_train, Y_train, X_test, Y_test) DataFrames properly scaled. 
+    """
+    if (minmaxscaling): 
+        scaler = MinMaxScaler(feature_range=(0, 1))
+    else: 
+        scaler = StandardScaler()
+    # Training 
+    X_training = df.drop(['electric_category'], axis = 1)
+    X_training_scaled = pd.DataFrame(scaler.fit_transform(X_training), columns = X_training.columns)
+    Y_training = df[['electric_category']].values
+
+    # Testing
+    X_testing = test_data_df.drop(['electric_category'], axis = 1)
+    X_testing_scaled = pd.DataFrame(scaler.transform(X_testing), columns = X_testing.columns)
+    Y_testing = test_data_df[['electric_category']].values
+
+    # Simpler names for usage in models 
+    X_train = X_training_scaled
+    Y_train = Y_training.ravel()
+    X_test = X_testing_scaled
+    Y_test = Y_testing
+    
+    return (X_train, Y_train, X_test, Y_test)
+
+
+def basic_rf_model(X_train, Y_train, X_test, Y_test): 
+    """
+    Trains a basic, non-hyperparametrized Random Forest classifier on the data to guage results. 
+
+    Arguments: 
+    X_train, Y_train, X_test, Y_test dataframes output from the scale step above. 
+
+    Returns: List of predictions for each row in X_test. 
+
+    """
+    forest_model = RandomForestClassifier()
+    forest_model.fit(X_train, Y_train) 
+    predictions = forest_model.predict(X_test)
+    print ('The accuracy is {}, with {} villages correctly classified.'.format(accuracy_score(Y_test, predictions), 
+            accuracy_score(Y_test, predictions, normalize=False)))
+    return predictions
+
+def basic_evaluation(Y_test, predictions): 
+    """
+    Basic model evaluation functions. 
+
+    Arguments: 
+    Y_test: Actual labels of the rows in X_test
+    predictions: Classifier predictions of the rows in X_test 
+
+    Prints out basic model evaluation tools- confusion matrix, classification report. 
+
+    """
+    print("Confusion Matrix:")
+    print(confusion_matrix(Y_test, predictions))
+    print()
+    print("Classification Report")
+    print(classification_report(Y_test, predictions))
+
+
+def plot_confusion_matrix(title, Y_test, predictions): 
+    conf_matrix = confusion_matrix(Y_test, predictions)
+    heatmap(conf_matrix, annot=True, fmt="d", annot_kws={"size":17})
+    plt.xlabel('Prediction', fontsize=18)
+    plt.ylabel('Truth', fontsize=18)
+    plt.title(title, fontsize=22)
+    plt.show()
+    
+def adv_metrics(Y_test, predictions): 
+    print("F1 Score:", f1_score(Y_test, predictions))
+    print("Precision:", precision_score(Y_test, predictions))
+    print("Recall:", recall_score(Y_test, predictions))
+
+"""
+Note: Check models_test.ipynb for code on Cross Validation, feature importances, etc. 
 
 
 """
-Functions to add 
-1. Reading in and cleaning dataframe 
-2. Interpolation 
-3. Train and test split 
-4. Upsampling 
-5. Scaling 
-6. Applying basic classifiers 
-7. Cross validation 
 
+
+def plot_precision_vs_recall(Y_test, X_test):
+    y_scores = random_forest.predict_proba(X_test)
+    y_scores = y_scores[:,1]
+    precision, recall, threshold = precision_recall_curve(Y_test, y_scores)
+
+    plt.plot(recall, precision, "g--", linewidth=2.5)
+    plt.ylabel("recall", fontsize=19)
+    plt.xlabel("precision", fontsize=19)
+    plt.axis([0, 1.5, 0, 1.5])
+
+
+"""
 Evaluation 
 1. Precision & Recall
 2. ROC 
