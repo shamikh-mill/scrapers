@@ -12,6 +12,8 @@ confirm_utils() # confirmation message
 
 """
 # Imports 
+
+# General 
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -21,6 +23,7 @@ import math
 from skimage import io
 import re
 
+# Data Preprocessing 
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -29,10 +32,12 @@ from sklearn.decomposition import PCA
 from sklearn.model_selection import cross_val_predict
 from sklearn.metrics import confusion_matrix
 
+# Data Visualization
 import seaborn as sns
 from matplotlib import style
 from seaborn import heatmap
 
+# Classifiers & Algorithms 
 from sklearn import linear_model
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
@@ -44,11 +49,14 @@ from sklearn.svm import SVC, LinearSVC
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import GradientBoostingClassifier
+
+# Evaluation Metrics
 from sklearn.metrics import classification_report, confusion_matrix, roc_curve, auc
 from sklearn.metrics import f1_score
 from sklearn.metrics import precision_score, recall_score
 from sklearn.metrics import precision_recall_curve
-
+from sklearn.metrics import roc_curve
+from sklearn.metrics import roc_auc_score
 
 
 
@@ -337,17 +345,18 @@ def plot_confusion_matrix(title, Y_test, predictions):
     plt.title(title, fontsize=22)
     plt.show()
     
-def adv_metrics(Y_test, predictions): 
+def adv_metrics_rf(X_test, Y_test, predictions): 
     print("F1 Score:", f1_score(Y_test, predictions))
     print("Precision:", precision_score(Y_test, predictions))
     print("Recall:", recall_score(Y_test, predictions))
 
+    y_scores = random_forest.predict_proba(X_test)
+    y_scores = y_scores[:,1]
+    print("ROC-AUC-Score:", roc_auc_score(Y_test, y_scores))
+
 """
 Note: Check models_test.ipynb for code on Cross Validation, feature importances, etc. 
-
-
 """
-
 
 def plot_precision_vs_recall(Y_test, X_test):
     y_scores = random_forest.predict_proba(X_test)
@@ -358,7 +367,19 @@ def plot_precision_vs_recall(Y_test, X_test):
     plt.ylabel("recall", fontsize=19)
     plt.xlabel("precision", fontsize=19)
     plt.axis([0, 1.5, 0, 1.5])
+    # plt.figure(figsize=(14, 7)) # Adjust size if needed
+    plt.show()
 
+
+def plot_roc_curve(label=None):
+    false_positive_rate, true_positive_rate, thresholds = roc_curve(Y_testing, y_scores)
+    plt.plot(false_positive_rate, true_positive_rate, linewidth=2, label=label)
+    plt.plot([0, 1], [0, 1], 'r', linewidth=4)
+    plt.axis([0, 1, 0, 1])
+    plt.xlabel('False Positive Rate (FPR)', fontsize=16)
+    plt.ylabel('True Positive Rate (TPR)', fontsize=16)
+    plt.show()
+    # plt.savefig('name.png') # Use to save image 
 
 """
 Evaluation 
