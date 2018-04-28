@@ -315,6 +315,7 @@ def basic_rf_model(X_train, Y_train, X_test, Y_test):
     forest_model = RandomForestClassifier()
     forest_model.fit(X_train, Y_train) 
     predictions = forest_model.predict(X_test)
+    print ('Basic Accuracy Score (warning- very preliminary metric):')
     print ('The accuracy is {}, with {} villages correctly classified.'.format(accuracy_score(Y_test, predictions), 
             accuracy_score(Y_test, predictions, normalize=False)))
     return predictions
@@ -337,7 +338,15 @@ def basic_evaluation(Y_test, predictions):
     print(classification_report(Y_test, predictions))
 
 
-def plot_confusion_matrix(title, Y_test, predictions): 
+def plot_confusion_matrix(title: str, Y_test, predictions): 
+    """
+    Plot a confusion matrix of the classification. 
+
+    Arguments: 
+    title (str): Title of the confusion matrix 
+    Y_test: Actual labels of the rows in X_test 
+    predictions: Classifier predictions of the rows in X_test 
+    """
     conf_matrix = confusion_matrix(Y_test, predictions)
     heatmap(conf_matrix, annot=True, fmt="d", annot_kws={"size":17})
     plt.xlabel('Prediction', fontsize=18)
@@ -345,7 +354,8 @@ def plot_confusion_matrix(title, Y_test, predictions):
     plt.title(title, fontsize=22)
     plt.show()
     
-def adv_metrics_rf(X_test, Y_test, predictions): 
+def advanced_metrics_rf(X_test, Y_test, predictions): 
+    """Various Metrics"""
     print("F1 Score:", f1_score(Y_test, predictions))
     print("Precision:", precision_score(Y_test, predictions))
     print("Recall:", recall_score(Y_test, predictions))
@@ -359,6 +369,7 @@ Note: Check models_test.ipynb for code on Cross Validation, feature importances,
 """
 
 def plot_precision_vs_recall(Y_test, X_test):
+    """Plots a Precision-Recall curve"""
     y_scores = random_forest.predict_proba(X_test)
     y_scores = y_scores[:,1]
     precision, recall, threshold = precision_recall_curve(Y_test, y_scores)
@@ -371,8 +382,11 @@ def plot_precision_vs_recall(Y_test, X_test):
     plt.show()
 
 
-def plot_roc_curve(label=None):
-    false_positive_rate, true_positive_rate, thresholds = roc_curve(Y_testing, y_scores)
+def plot_roc_curve(Y_test, label=None):
+    """Plots an ROC curve"""
+    y_scores = random_forest.predict_proba(X_test)
+    y_scores = y_scores[:,1]
+    false_positive_rate, true_positive_rate, thresholds = roc_curve(Y_test, y_scores)
     plt.plot(false_positive_rate, true_positive_rate, linewidth=2, label=label)
     plt.plot([0, 1], [0, 1], 'r', linewidth=4)
     plt.axis([0, 1, 0, 1])
@@ -380,18 +394,3 @@ def plot_roc_curve(label=None):
     plt.ylabel('True Positive Rate (TPR)', fontsize=16)
     plt.show()
     # plt.savefig('name.png') # Use to save image 
-
-"""
-# Add docstrings for evals 
-Evaluation 
-1. Precision & Recall
-2. ROC 
-3. F-Score 
-4. Confusion matrices
-5. Feature importances
-6. classification_reports 
-
-
-Functions to deploy on new data 
-1. Intersection of features 
-"""
